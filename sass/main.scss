@@ -1,0 +1,475 @@
+@import '_colors';
+@import '_animation';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Cormorant', sans-serif;
+	background-color: rgba(50, 50, 50, 0.7);
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: grey;
+}
+
+.blue-text {
+	color: grey;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	a,
+	i {
+		color: $white;
+	}
+
+	a:hover {
+		color: gold;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+		font-size: 30px;
+		margin-top: 5px;
+	}
+
+	.nav-link{
+		font-size: 23px;
+	}
+
+	.active {
+		color: gold;
+	}
+}
+
+.googlemap{
+	display: flex;
+}
+
+
+header {
+	color: rgb(205, 205, 220);
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/gavel-7499911_1920.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+}
+
+.services {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.services-card-title {
+		font-size: 25px;
+		text-transform: uppercase;
+	}
+
+	.services-card-text {
+		font-size: 20px;
+	}
+
+	.services-hover {
+		transition: color 0.1s;
+	}
+
+	.services-hover:hover {
+		color: gold;
+	}
+}
+
+.services-hero {
+	position: relative;
+	background-image: url('../img/about-hero-small.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: $light-gray;
+	z-index: 0;
+
+
+	.services-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.services-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.portfolio {
+
+    background-color: $light-gray;
+	.carousel-item {
+		position: relative;
+		height: 600px;
+		
+		h5{
+			font-size: 25px;
+		}
+	}
+
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.prices {
+	.price-box {
+		margin: 20px 10px;
+		padding: 30px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+
+		h3 {
+			color: gold;
+			text-transform: uppercase;
+		}
+
+		span {
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+		.price-tag {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+
+	.price-info {
+		margin-top: 30px;
+		
+
+		a {
+			text-decoration: none;
+		}
+
+		span{
+			font-size: 25px;
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('../img/contact-hero.jpg');
+	background-position: bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+
+	h2 {
+		color: $light-gray;
+		font-weight: bold;
+		font-size: 40px;
+	}
+
+	.underline {
+		background-color: $light-gray;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: $white;
+
+		.contact-item {
+			margin: 100px 0;
+			font-size: 20px;
+			font-family: 'Nanum Myeongjo', sans-serif;
+
+			.data{
+				margin-top: 20px;
+				margin-bottom: 25px;
+				text-transform: uppercase;
+				font-size: 35px;
+			}
+
+			h3 {
+				margin-top: 20px;
+				margin-bottom: 25px;
+				text-transform: uppercase;
+				font-size: 35px;
+			}
+
+			.hours {
+				margin-top: 20px;
+				margin-bottom: 25px;
+				text-transform: uppercase;
+				font-size: 35px;
+			}
+
+		
+
+			.icons {
+				font-size: 60px;
+				margin: 20px 20px;
+
+				a {
+					color: white;
+				}
+				a:hover{
+					color: gold;
+					transition: color .5s;
+				}
+			}
+
+			.social-media {
+				font-size: 26px;
+
+				a {
+					padding: 10px;
+					color: $white;
+				}
+
+				a:hover {
+					color: gold;
+				}
+			}
+		}
+	}
+}
+
+.hide{
+	display: none;
+}
+
+.cookie-box{
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+	background-color: #fff;
+	opacity: 0;
+	transform: translateY(100%);
+	animation: show-cookies .5s .5s forwards;
+}
+
+.cookie-box:before{
+	position: absolute;
+	top: -280px;
+	right: 50px;
+	width: 400px;
+	height: 400px;
+	background-size: cover;
+	content: '';
+}
+
+.cookie-btn{
+	margin-top: 10px;
+	padding: 0.5em 0.5em;
+	font-size: 1.3rem;
+	border: 2px solid black;
+	color: black;
+	border-radius: 3px;
+	transition: background-color .3s;
+}
+
+.cookie-btn:hover{
+	background-color: white;
+}
+
+.acount{
+	font-size: 20px;
+	text-transform: uppercase;
+	
+}
+
+@keyframes show-cookies {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+	
+
+	.cookie-box{
+		font-size: 15px;
+	}
+
+	.cookie-btn{
+		font-size: 15px;
+	}
+
+	.navbar-brand{
+		span{
+			font-size: 18px;
+		}
+	}
+	
+	
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+
+	.cookie-box{
+		font-size: 20px;
+	}
+
+	.cookie-btn{
+		font-size: 20px;
+	}
+
+	.navbar-brand{
+		span{
+			font-size: 23px;
+		}
+	}
+	
+}
+
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+
+	
+	.services-hero {
+		background-image: url('../img/about-hero-big.jpg');
+	}
+
+	.prices {
+		.price-info {
+			font-size: 18px;
+			
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/gavel-7499911_1920.jpg');
+		}
+	}
+	.navbar-brand{
+		span{
+			font-size: 30px;
+		}
+	}
+
+}
